@@ -10,5 +10,45 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)PlanACAD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Lesson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\LessonDescription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Menu\MenuView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\RootView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\MenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Start\StartView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderer\MenuCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\StundenplanViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Stundenplan\StundenplanPage.xaml.cs">
+      <DependentUpon>StundenplanPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Day.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Week.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MyIkeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Stundenplan\DayPage.xaml.cs">
+      <DependentUpon>DayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Stundenplan\MyCarouselPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Menu\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Start\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Stundenplan\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Renderer\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Stundenplan\StundenplanPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Stundenplan\DayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
