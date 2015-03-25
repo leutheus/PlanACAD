@@ -5,7 +5,8 @@ namespace PlanACAD
 {
 	public class Day
 	{
-		public DateTime DayDate { get; set; }
+		public Boolean IsBusy { get ; set; }
+		public DateTime DayDate { get ; set; }
 		public List<Lesson> Schedule { get; set; }
 	}
 }

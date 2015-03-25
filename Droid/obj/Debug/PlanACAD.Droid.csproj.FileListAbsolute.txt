@@ -26,3 +26,4 @@ C:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\bin\Debug\OkHttp.dll
 C:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\obj\Debug\DayPage.xaml.g.cs
 C:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\bin\Debug\Newtonsoft.Json.dll
 C:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\bin\Debug\Newtonsoft.Json.xml
+C:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\obj\Debug\LessonDetailView.xaml.g.cs

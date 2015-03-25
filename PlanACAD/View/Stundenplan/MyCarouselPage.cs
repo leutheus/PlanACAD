@@ -25,9 +25,9 @@ namespace PlanACAD
 			//source.Add(d1);
 			//source.Add (d2);
 
-			
+
 			ItemTemplate = new DataTemplate (() => {
-				return new DayPage (VM);
+				return new DayPage(new DayViewModel(VM, new Day()));
 			});
 
 			ItemsSource = VM.DayPages;
@@ -62,6 +62,8 @@ namespace PlanACAD
 				Debug.WriteLine (leftswipes);
 
 				leftswipes--;
+				//DayPage left = new DayPage(new DayViewModel(VM, new Day {DayDate = DateTime.Now.AddDays (leftswipes)}));
+				//left.Today = DateTime.Now.AddDays (leftswipes);
 				VM.DayPages.Insert (0, new Day { DayDate = DateTime.Now.AddDays (leftswipes) });
 
 				newIndex = 1;
@@ -86,6 +88,7 @@ namespace PlanACAD
 			base.OnAppearing ();
 			hasAppeared = true;
 			CurrentPage = Children [1];
+
 		}
 
 

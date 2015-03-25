@@ -9,7 +9,7 @@ namespace PlanACAD
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new MyCarouselPage (new StundenplanViewModel());
+			MainPage =new NavigationPage( new MyCarouselPage (new StundenplanViewModel()));
 		
 		}
 

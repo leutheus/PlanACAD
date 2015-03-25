@@ -10,34 +10,65 @@ namespace PlanACAD
 {
 	public partial class DayPage : ContentPage
 	{
-		public StundenplanViewModel VM;
-		public DateTime Today;
+		
+
 		public Boolean IsInitialized;
-		public DayPage (StundenplanViewModel VM)
+
+		public DayViewModel ViewModel;
+
+
+
+		public DayPage (DayViewModel vm)
 		{
 			InitializeComponent ();
-			this.VM = VM;
 
-			Debug.WriteLine ("day created");
-
+			this.BindingContext = vm;
+			this.ViewModel = vm;
 			//M.GetScheduleForDay (Today);
 
 		}
 
-		async protected override void OnAppearing() {
+	protected override void OnAppearing() {
 			base.OnAppearing ();
-			//DateTime today = DateTime.Parse (DateLabel.Text);
-			Console.WriteLine (DateLabel.Text);
 
 			if (!IsInitialized) {
-				DateTime today = DateTime.ParseExact(DateLabel.Text, "MM/dd/yyyy HH:mm:ss", null);
-				List<Lesson> lessons = await VM.GetScheduleForDay (today);
-				Device.BeginInvokeOnMainThread (() => {
-					LessonLabel.Text = lessons[0].Faecher[1].Bezeichnung;
-					LessonLabel.Text = lessons[0].Beginn;
-				});
+				
+			
+
+			Day d = (Day)BindingContext;
+		
+			
+			Device.BeginInvokeOnMainThread (() => {
+				Circle.IsVisible = true;
+				Circle.IsRunning = true;
+				DateLabel.Text = d.DayDate.ToShortDateString ();
+				
+
+			});
+
+			Console.WriteLine ("DEBUG \t "  + d.DayDate.ToShortDateString());
+			ViewModel.myDay = d;
+
+				
+			if (ViewModel != null) {
+				ViewModel.LoadDay.Execute (null);
+			}
+			
+
+			Device.BeginInvokeOnMainThread (() => {
+				ScheduleView.ItemsSource = ViewModel.Lessons;
+				Circle.IsVisible = false;
+				Circle.IsRunning = false;
+			});
 				IsInitialized = true;
 			}
+
+		}
+
+		public void OnItemSelected (object sender, ItemTappedEventArgs e) {
+			if (e.Item == null)
+				return;
+			Navigation.PushAsync (new LessonDetailView (e.Item as Lesson));
 		}
 	}
 }

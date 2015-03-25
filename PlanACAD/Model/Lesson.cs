@@ -8,6 +8,12 @@ namespace PlanACAD
 	/// </summary>
 	public class Lesson
 	{
+
+
+		public Lesson() : base () {
+			
+		}
+
 		/// <summary>
 		/// Gets or sets the date.
 		/// </summary>

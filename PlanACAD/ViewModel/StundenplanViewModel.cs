@@ -32,11 +32,11 @@ namespace PlanACAD
 		{
 			weeklySchedule = new ObservableCollection<Week> ();
 			DataManager = DependencyService.Get<IDataManager> ();
+		
 			DayPages = new ObservableCollection<Day> ();
+			DayPages.Add (new Day { DayDate = DateTime.Now.AddDays(-1)});
 			DayPages.Add (new Day { DayDate = DateTime.Now });
 			DayPages.Add (new Day { DayDate = DateTime.Now.AddDays(1)});
-			DayPages.Add (new Day { DayDate = DateTime.Now.AddDays(2)});
-			DayPages.Add (new Day { DayDate = DateTime.Now.AddDays(3)});
 
 		}
 
@@ -57,11 +57,17 @@ namespace PlanACAD
 			Debug.WriteLine("Loaded Day");
 		}
 
-		public async Task<List<Lesson>> GetScheduleForDay(DateTime ThisDay) {
+		public async Task<List<Lesson>> GetScheduleForDay(Day ThisDay) {
+			Console.WriteLine ("Need data for " + ThisDay.DayDate.ToShortDateString ());
 
-			await Task.Delay (3000);
-
-			return await DataManager.GetDayAsync (ThisDay);
+			List<Lesson> result = new List<Lesson>();
+			try {
+				result = await DataManager.GetDayAsync (ThisDay.DayDate);
+			} catch (Exception e) {
+				Debug.WriteLine (e.Message);
+			}
+			return result; 
+				
 			//IS ALREADY LOADED?
 			//IS IN DATABASE?
 

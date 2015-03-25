@@ -14,19 +14,10 @@ namespace PlanACAD {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class DayPage : ContentPage {
-        
-        private ActivityIndicator Circle;
-        
-        private Label DateLabel;
-        
-        private ListView ScheduleView;
+    public partial class LessonDetailView : ContentPage {
         
         private void InitializeComponent() {
-            this.LoadFromXaml(typeof(DayPage));
-            Circle = this.FindByName<ActivityIndicator>("Circle");
-            DateLabel = this.FindByName<Label>("DateLabel");
-            ScheduleView = this.FindByName<ListView>("ScheduleView");
+            this.LoadFromXaml(typeof(LessonDetailView));
         }
     }
 }

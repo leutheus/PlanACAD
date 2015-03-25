@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PlanACAD.LessonDetailView">
+	<ContentPage.Content>
+ 		<TableView HasUnevenRows="true">
+ 			<TableView.Root>
+ 				<TableRoot>
+ 					<TableSection Title="Zeit">
+ 						<TextCell Text="{Binding Datum}" Detail ="{Binding Beginn}">
+ 						</TextCell>
+
+ 					</TableSection>
+ 					<TableSection Title="Fach">
+ 						<TextCell Text="{Binding Faecher[0].Bezeichnung}" Detail="{Binding Faecher[1].Bezeichnung}"></TextCell>
+ 					</TableSection>
+
+ 					<TableSection Title="Wer Wo">
+ 						<TextCell Text="{Binding Dozent}" Detail="{Binding Raum}"></TextCell>
+ 					</TableSection>
+ 				</TableRoot>
+ 			</TableView.Root>
+ 		</TableView>
+	</ContentPage.Content>
+</ContentPage>
