@@ -30,13 +30,13 @@ namespace PlanACAD
 
 	protected override void OnAppearing() {
 			base.OnAppearing ();
-
+		
 			if (!IsInitialized) {
 				
 			
 
-			Day d = (Day)BindingContext;
-		
+				Day d = (Day)BindingContext;
+
 			
 			Device.BeginInvokeOnMainThread (() => {
 				Circle.IsVisible = true;

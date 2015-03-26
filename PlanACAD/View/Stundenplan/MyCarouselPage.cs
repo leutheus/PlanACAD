@@ -9,12 +9,10 @@ namespace PlanACAD
 	public class MyCarouselPage : CarouselPage
 	{
 
-		/*Day d1 = new Day { DayDate = DateTime.Now };
-		Day d2 = new Day { DayDate = DateTime.Now.AddDays (1) };
-		ObservableCollection<Day> source; */
-		bool hasAppeared;
-
 		StundenplanViewModel VM;
+		int previousIndex;
+		int leftswipes = -1;
+
 
 		public MyCarouselPage (StundenplanViewModel VM)
 		{
@@ -24,7 +22,7 @@ namespace PlanACAD
 
 			//source.Add(d1);
 			//source.Add (d2);
-
+			Title="Stundenplan";
 
 			ItemTemplate = new DataTemplate (() => {
 				return new DayPage(new DayViewModel(VM, new Day()));
@@ -33,66 +31,32 @@ namespace PlanACAD
 			ItemsSource = VM.DayPages;
 			CurrentPage = Children [1];
 		}
-		bool first = true;
-
-		int previousIndex;
-		int leftswipes = -1;
-
-
 
 
 		protected override void OnCurrentPageChanged () {
 
-
-
-
 			base.OnCurrentPageChanged();
-
-
 
 			int newIndex = this.Children.IndexOf(CurrentPage);
 
-			Debug.WriteLine ("Prev: " + previousIndex + " New: " + newIndex);
+			//Debug.WriteLine ("Prev: " + previousIndex + " New: " + newIndex);
 			if (previousIndex ==  0 && newIndex == 0)
-				
 				return;
 
 			if (newIndex == 0 && previousIndex == 1) {
 				Debug.WriteLine ("Anfang erreicht");
-				Debug.WriteLine (leftswipes);
-
 				leftswipes--;
-				Debug.WriteLine (leftswipes);
-				//DayPage left = new DayPage(new DayViewModel(VM, new Day {DayDate = DateTime.Now.AddDays (leftswipes)}));
-				//left.Today = DateTime.Now.AddDays (leftswipes);
 				VM.DayPages.Insert (0, new Day { DayDate = DateTime.Now.AddDays (leftswipes) });
-
 				newIndex = 1;
-
 			} 
 
 			if (newIndex == Children.Count-1) {
 				
 				Debug.WriteLine ("Ende erreicht");
-
-
 				VM.DayPages.Add( new Day { DayDate = DateTime.Now.AddDays (newIndex) });
-
-				//CurrentPage = Children [newIndex-1];
-				CurrentPage = Children [newIndex];
-				previousIndex = newIndex;
 			}
 			previousIndex = newIndex;
 		}
-
-		protected override void OnAppearing ()
-		{
-			base.OnAppearing ();
-			hasAppeared = true;
-			//CurrentPage = Children [1];
-
-		}
-
 
 	}
 }
