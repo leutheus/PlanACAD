@@ -74,7 +74,7 @@ namespace PlanACAD
 				Debug.WriteLine ("Ende erreicht");
 
 
-				VM.DayPages.Add( new Day { DayDate = DateTime.Now.AddDays (newIndex + 1) });
+				VM.DayPages.Add( new Day { DayDate = DateTime.Now.AddDays (newIndex) });
 
 				CurrentPage = Children [newIndex-1];
 				CurrentPage = Children [newIndex];
