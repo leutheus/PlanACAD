@@ -1,34 +1,23 @@
-﻿<Properties StartupItem="Droid\PlanACAD.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_for_Galaxy_Nexus_by_Google" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PlanACAD\View\Stundenplan\DayPage.xaml.cs">
+﻿<Properties StartupItem="iOS/PlanACAD.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad2.8.2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/obj/iPhoneSimulator/Debug/DayPage.xaml.g.cs">
     <Files>
-      <File FileName="iOS\AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\Model\Lesson.cs" Line="14" Column="4" />
-      <File FileName="PlanACAD\Model\LessonDescription.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\ViewModel\BaseViewModel.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\View\Menu\MenuView.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\PlanACAD.cs" Line="14" Column="4" />
-      <File FileName="PlanACAD\View\RootView.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\ViewModel\MenuViewModel.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\Model\MenuItem.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\Model\BaseModel.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\View\Start\StartView.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\Renderer\MenuCell.cs" Line="1" Column="1" />
-      <File FileName="Droid\Renderer\MenuCellRenderer.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\View\Stundenplan\MyCarouselPage.cs" Line="81" Column="30" />
-      <File FileName="PlanACAD\View\Stundenplan\DayPage.xaml.cs" Line="76" Column="2" />
-      <File FileName="PlanACAD\View\Stundenplan\DayPage.xaml" Line="9" Column="97" />
-      <File FileName="PlanACAD\ViewModel\StundenplanViewModel.cs" Line="40" Column="1" />
-      <File FileName="PlanACAD\View\Stundenplan\StundenplanPage.xaml" Line="1" Column="1" />
-      <File FileName="PlanACAD\View\Stundenplan\StundenplanPage.xaml.cs" Line="29" Column="48" />
-      <File FileName="PlanACAD\Services\MyIkeService.cs" Line="44" Column="1" />
-      <File FileName="PlanACAD\Services\IDataManager.cs" Line="19" Column="1" />
-      <File FileName="PlanACAD\Model\Day.cs" Line="8" Column="39" />
-      <File FileName="PlanACAD\ViewModel\DayViewModel.cs" Line="49" Column="5" />
-      <File FileName="c:\Users\thomasl\Desktop\PlanACAD\PlanACAD\Droid\obj\Debug\DayPage.xaml.g.cs" Line="1" Column="1" />
-      <File FileName="PlanACAD\View\Stundenplan\LessonDetailView.xaml" Line="19" Column="18" />
-      <File FileName="PlanACAD\View\Stundenplan\LessonDetailView.xaml.cs" Line="17" Column="15" />
+      <File FileName="PlanACAD/Services/MyIkeService.cs" Line="1" Column="1" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="PlanACAD/ViewModel/DayViewModel.cs" Line="34" Column="9" />
+      <File FileName="PlanACAD/View/Stundenplan/DayPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="PlanACAD/View/Stundenplan/DayPage.xaml" Line="1" Column="1" />
+      <File FileName="iOS/obj/iPhoneSimulator/Debug/DayPage.xaml.g.cs" Line="26" Column="1" />
+      <File FileName="PlanACAD/View/Stundenplan/MyCarouselPage.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="PlanACAD" expanded="True" />
+          <Node name="PlanACAD.iOS" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

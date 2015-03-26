@@ -6,6 +6,7 @@ using System.Diagnostics;
 using ModernHttpClient;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 
 [assembly: Xamarin.Forms.Dependency(typeof(MyIkeService))]
@@ -19,16 +20,16 @@ namespace PlanACAD
 		}
 
 		public async Task<List<Lesson>> GetDayAsync(DateTime Day) {
-			Console.WriteLine ("!\tLoading Data for Day: " + Day.ToShortDateString ());
+			Console.WriteLine ("IKEService:\tLoading Data for Day: " + Day.ToShortDateString ());
 
 
 			using (var httpClient = new HttpClient()) {
 				httpClient.Timeout = TimeSpan.FromSeconds (10);
 
 				int d = Day.Day;
-				Console.WriteLine ("MYIKESERVICE\t Needed:  " + d);
+				//Console.WriteLine ("MYIKESERVICE\t Needed:  " + d);
 				int DaysInMonth = DateTime.DaysInMonth(Day.Year, Day.Month);
-				Console.WriteLine ("MYIKESERVICE\t Month has:  " + DaysInMonth);
+				//Console.WriteLine ("MYIKESERVICE\t Month has:  " + DaysInMonth);
 
 				var requestString = "";
 				//TODO switch
@@ -45,7 +46,7 @@ namespace PlanACAD
 				var calResponseText = await calResponse.Content.ReadAsStringAsync ();
 				var calResponse2 = await httpClient.GetAsync (requestString);
 				var calResponseText2 = await calResponse2.Content.ReadAsStringAsync ();
-				Console.WriteLine ("!\tResult Data for Day: " + calResponseText2);
+				//Console.WriteLine ("!\tResult Data for Day: " + calResponseText2);
 				List<Lesson> result = JsonConvert.DeserializeObject<List<Lesson>> (calResponseText2);
 				return result;
 			}

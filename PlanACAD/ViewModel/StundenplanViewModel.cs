@@ -57,23 +57,14 @@ namespace PlanACAD
 			Debug.WriteLine("Loaded Day");
 		}
 
-		public async Task<List<Lesson>> GetScheduleForDay(Day ThisDay) {
-			Console.WriteLine ("Need data for " + ThisDay.DayDate.ToShortDateString ());
 
-			List<Lesson> result = new List<Lesson>();
-			try {
-				result = await DataManager.GetDayAsync (ThisDay.DayDate);
-			} catch (Exception e) {
-				Debug.WriteLine (e.Message);
-			}
-			return result; 
 				
 			//IS ALREADY LOADED?
 			//IS IN DATABASE?
 
 			//LOAD FROM SERVER
 
-		}
+
 	}
 }
 

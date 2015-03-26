@@ -1,11 +1,10 @@
 mscorlib.dll
-System.dll
-System.Xml.dll
-System.Core.dll
-Mono.Dynamic.Interpreter.dll
-Xamarin.Forms.Platform.iOS.dll
 Xamarin.Forms.Core.dll
 System.Runtime.dll
+System.Core.dll
+System.dll
+System.Xml.dll
+Mono.Dynamic.Interpreter.dll
 System.ComponentModel.Composition.dll
 System.ObjectModel.dll
 System.IO.dll
@@ -22,5 +21,9 @@ System.Runtime.Extensions.dll
 System.Linq.dll
 System.Reflection.Extensions.dll
 System.Diagnostics.Debug.dll
+Xamarin.Forms.Platform.iOS.dll
 System.Net.Http.dll
 System.Runtime.Serialization.dll
+Xamarin.Forms.Xaml.dll
+System.Text.RegularExpressions.dll
+Newtonsoft.Json.dll

@@ -24,7 +24,7 @@ namespace PlanACAD
 
 			this.BindingContext = vm;
 			this.ViewModel = vm;
-			//M.GetScheduleForDay (Today);
+
 
 		}
 
@@ -46,7 +46,7 @@ namespace PlanACAD
 
 			});
 
-			Console.WriteLine ("DEBUG \t "  + d.DayDate.ToShortDateString());
+			//Console.WriteLine ("DEBUG \t "  + d.DayDate.ToShortDateString());
 			ViewModel.myDay = d;
 
 				
@@ -69,6 +69,7 @@ namespace PlanACAD
 			if (e.Item == null)
 				return;
 			Navigation.PushAsync (new LessonDetailView (e.Item as Lesson));
+			((ListView)sender).SelectedItem = null; 
 		}
 	}
 }

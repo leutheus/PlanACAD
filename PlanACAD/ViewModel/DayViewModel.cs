@@ -40,17 +40,19 @@ namespace PlanACAD
 				return;
 			IsBusy = true;
 			Lessons.Clear ();
-			Console.WriteLine ("DayViewModel: Loading Lessons for " + myDay.DayDate.ToShortDateString());
-			List<Lesson> result = await StundenPlanVM.GetScheduleForDay (myDay);
+			Console.WriteLine ("DayViewModel:/t Loading Lessons for " + myDay.DayDate.ToShortDateString());
+			List<Lesson> result = await DataManager.GetDayAsync (myDay.DayDate);
 
 			foreach (Lesson l  in result) {
-				Console.WriteLine ("DayViewModel: " + l.Faecher[0].Bezeichnung);
+				//Console.WriteLine ("DayViewModel: " + l.Faecher[0].Bezeichnung);
 				Lessons.Add (l);
 			}
 			myDay.Schedule = result;
 			IsBusy = false;
 			//myDay.Schedule = result;
 		}
+
+
 
 		//public async void  GetDay(Day d) {
 			

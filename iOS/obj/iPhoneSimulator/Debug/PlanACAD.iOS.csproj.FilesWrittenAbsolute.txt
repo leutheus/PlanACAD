@@ -27,3 +27,11 @@
 /Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
 /Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
 /Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/PlanACAD.iOS.StundenplanPage.xaml
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/PlanACAD.iOS.DayPage.xaml
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/PlanACAD.iOS.LessonDetailView.xaml
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/StundenplanPage.xaml.g.cs
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/DayPage.xaml.g.cs
+/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/LessonDetailView.xaml.g.cs
+/Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug/ModernHttpClient.dll

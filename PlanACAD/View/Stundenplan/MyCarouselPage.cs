@@ -36,7 +36,7 @@ namespace PlanACAD
 		bool first = true;
 
 		int previousIndex;
-		int leftswipes = 0;
+		int leftswipes = -1;
 
 
 
@@ -62,11 +62,13 @@ namespace PlanACAD
 				Debug.WriteLine (leftswipes);
 
 				leftswipes--;
+				Debug.WriteLine (leftswipes);
 				//DayPage left = new DayPage(new DayViewModel(VM, new Day {DayDate = DateTime.Now.AddDays (leftswipes)}));
 				//left.Today = DateTime.Now.AddDays (leftswipes);
 				VM.DayPages.Insert (0, new Day { DayDate = DateTime.Now.AddDays (leftswipes) });
 
 				newIndex = 1;
+
 			} 
 
 			if (newIndex == Children.Count-1) {
@@ -76,7 +78,7 @@ namespace PlanACAD
 
 				VM.DayPages.Add( new Day { DayDate = DateTime.Now.AddDays (newIndex) });
 
-				CurrentPage = Children [newIndex-1];
+				//CurrentPage = Children [newIndex-1];
 				CurrentPage = Children [newIndex];
 				previousIndex = newIndex;
 			}
@@ -87,7 +89,7 @@ namespace PlanACAD
 		{
 			base.OnAppearing ();
 			hasAppeared = true;
-			CurrentPage = Children [1];
+			//CurrentPage = Children [1];
 
 		}
 

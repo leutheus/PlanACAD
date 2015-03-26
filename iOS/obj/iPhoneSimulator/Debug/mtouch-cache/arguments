@@ -1,6 +1,6 @@
-# Version: 8.8.0.2 (ccfcd59)
+# Version: 8.8.1.9 (7e1f69e)
 # [first argument, ignore] # /Users/kp/Projects/PlanACAD/iOS/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.0.2/bin/mtouch-64 \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.1.9/bin/mtouch-64 \
 	--cache \
 	/Users/kp/Projects/PlanACAD/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
@@ -30,6 +30,12 @@
 	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
 	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	../packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	../Components/modernhttpclient-2.3.0/lib/ios-unified/ModernHttpClient.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -126,4 +132,8 @@
 	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
 	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	../packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	../Components/modernhttpclient-2.3.0/lib/ios-unified/ModernHttpClient.dll \
 	/Users/kp/Projects/PlanACAD/iOS/bin/iPhoneSimulator/Debug//PlanACAD.iOS.exe \
